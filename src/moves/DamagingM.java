@@ -1,6 +1,6 @@
 package moves;
 
-import Entities.BattleEntity;
+import entities.BattleEntity;
 
 import java.util.ArrayList;
 

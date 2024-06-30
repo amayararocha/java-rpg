@@ -1,7 +1,8 @@
-package Moves;
+package moves;
 
-import Entities.BattleEntity;
-import Statuses.*;
+import entities.BattleEntity;
+import statuses.DoT;
+import statuses.Status;
 
 public class StatusM extends Move{ //Status is always a solo move without passive or a passive to another move
     private final Status status;

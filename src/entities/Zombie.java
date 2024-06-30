@@ -1,8 +1,8 @@
 package entities;
 
-import Moves.*;
-import Statuses.DoT;
-import Statuses.StatusType;
+import moves.*;
+import statuses.DoT;
+import statuses.StatusType;
 
 public class Zombie extends Enemy{
 

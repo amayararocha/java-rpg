@@ -1,7 +1,6 @@
 package items;
 
-import Entities.*;
-import Statuses.*;
+import entities.*;
 
 public abstract class Item {
     protected String name;

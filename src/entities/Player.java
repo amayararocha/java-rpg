@@ -1,11 +1,11 @@
 package entities;
 
-import Statuses.Status;
-import Statuses.StatusType;
-import Weapons.Weapon;
-import Moves.*;
-
+import statuses.Status;
+import statuses.StatusType;
+import weapons.Weapon;
+import moves.*;
 import java.util.*;
+
 public class Player extends BattleEntity{
     private Weapon weapon;
     public Player(String name){

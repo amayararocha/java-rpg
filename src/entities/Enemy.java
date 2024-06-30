@@ -1,13 +1,13 @@
 package entities;
 
-import Moves.*;
+import moves.*;
 
 import java.util.ArrayList;
 
 public abstract class Enemy extends BattleEntity{
     protected float trapRate;
     protected ArrayList<Move> moves;
-    public Enemy(String name, int healthPoints, int attack, float trapRate){ //TO DO MAKE ENEMY SUBCLASSES
+    public Enemy(String name, int healthPoints, int attack, float trapRate){
         super(name, healthPoints, attack);
         this.trapRate = trapRate;
         moves = new ArrayList<>();

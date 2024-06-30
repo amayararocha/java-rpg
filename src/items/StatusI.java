@@ -1,7 +1,7 @@
 package items;
 
-import Entities.BattleEntity;
-import Moves.StatusM;
+import entities.BattleEntity;
+import moves.StatusM;
 
 public class StatusI extends Item{
 

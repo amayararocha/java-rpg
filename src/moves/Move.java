@@ -1,6 +1,6 @@
 package moves;
 
-import Entities.*;
+import entities.*;
 
 import java.util.ArrayList;
 

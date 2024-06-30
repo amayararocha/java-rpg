@@ -1,7 +1,7 @@
 package items;
 
-import Entities.BattleEntity;
-import Moves.*;
+import entities.BattleEntity;
+import moves.*;
 
 public class HealingI extends Item{
 

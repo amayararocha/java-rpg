@@ -1,6 +1,6 @@
 package entities;
 
-import Moves.DamagingM;
+import moves.DamagingM;
 
 public class Skeleton extends Enemy{
 

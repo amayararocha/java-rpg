@@ -1,7 +1,7 @@
 package entities;
 
-import Statuses.*;
-import Moves.*;
+import statuses.*;
+import moves.*;
 
 import java.lang.reflect.Array;
 import java.util.*;
@@ -13,7 +13,7 @@ public abstract class BattleEntity {
     protected boolean named;
     protected int damageTaken;
     protected int baseHealthPoints;
-    public int baseAttack;      //baseCritChance = 0.2; baseCritDamage = 0.5
+    public int baseAttack;
     protected HashMap<String, Double> attributeStats = new HashMap<>(){{put("MELEE", 0.0); put("RANGED", 0.0);
         put("DARK", 0.0); put("LIGHT", 0.0); put("NORMAL", 0.0); put("NONE", zero);}};
 
@@ -94,8 +94,8 @@ public abstract class BattleEntity {
         return 0.2f;
     }
 
-    public float getCritChanceBattle() {       //unlike int stats, double stats will ADD the status multiplier
-        float total = getBaseCritChance();     //  instead of adding the product of the multiplier and baseStat
+    public float getCritChanceBattle() {
+        float total = getBaseCritChance();
         try{
             for(Status status : statuses.get(StatusType.CRITCHANCE)){
                 if(status instanceof Buff){
@@ -222,10 +222,10 @@ public abstract class BattleEntity {
             for(Status s : statuses.get(StatusType.DoT)) displayStatus(s);
         }
     }
-    private void displayStatus(Status s){ //displayStats helper
+    private void displayStatus(Status s){
         System.out.println("*" + s);
     }
-    public void addStatus(Status status){ //add the status in the player statuses (not apply status)
+    public void addStatus(Status status){
         if(status instanceof DoT){
             statuses.get(StatusType.DoT).add(status);
         }else{
