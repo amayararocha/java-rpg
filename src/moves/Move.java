@@ -18,12 +18,10 @@ public abstract class Move {
         isPassive = true;
     }
 
-    //GETTER
     public String getName() {
         return name;
     }
 
-    //SETTER
     public void setPassive(boolean passive) { //maybe useful?
         isPassive = passive;
     }

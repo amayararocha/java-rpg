@@ -4,16 +4,9 @@ import entities.*;
 
 public class DoT extends Status{
 
-    //Damage over Time (DoT) (3) TYPES:
-    //1 Poison (-25% of enemy's attack)
-    //2 Bleed (-5% of player's max health after buffs)
-
-    //Poison = 25% of attacker's attackBattle;
-    //Bleed = 10% of receiver's maxHealthBattle;
-
     private int damage;
 
-    public DoT(String name, StatusType type) { //Default duration 3 turns
+    public DoT(String name, StatusType type) {
         super(name, type);
         if(type != StatusType.BLEED && type != StatusType.POISON){
             System.out.println("STATUS DOT "+name+" HAS TYPE NOT BLEED OR POISON");
@@ -23,7 +16,7 @@ public class DoT extends Status{
         this(name, type);
         this.duration = duration;
     }
-    //SETTER
+
     public void setDamage(int damage){
         this.damage = damage;
     }
@@ -41,11 +34,9 @@ public class DoT extends Status{
         }
     }
 
-    //GETTER
     public int getDamage() {
         return damage;
     }
-
 
     @Override
     public String toString(){

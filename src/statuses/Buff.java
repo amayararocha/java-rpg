@@ -6,7 +6,7 @@ public class Buff extends Status{
 
     private final float multiplier;
 
-    public Buff(String name, StatusType type, float multiplier){ //Default duration 3 turns
+    public Buff(String name, StatusType type, float multiplier){
         super(name, type);
         if(type == StatusType.BLEED || type == StatusType.POISON){
             System.out.println("WARNING: THE BUFF " + name + " HAS BEEN ASSIGNED WITH THE TYPE POISON OR BLEED");
@@ -34,7 +34,7 @@ public class Buff extends Status{
     public void statusInflict(BattleEntity bE) {
         super.statusInflict(bE);
         System.out.println(bE.getName() + " was blessed with a " + getStatusName() + " Buff!");
-        switch (type) {         //the message pop up
+        switch (type) {
             case HEALTH:
                 System.out.println(bE.getName() + "'s max health is increased by " + (int) (bE.getBaseHealthPoints() * multiplier) + "!");
                 System.out.println(bE.getName() + "'s current health is now " + bE.getHealthPoints() + " out of " + bE.getMaxHealthPointsBattle() + "!");

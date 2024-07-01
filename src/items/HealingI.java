@@ -18,7 +18,7 @@ public class HealingI extends Item{
         healingM.doMove(battleEntity, battleEntity);
     }
     //OVERRIDE OVERLOAD
-    public void useItem(BattleEntity attacker, BattleEntity receiver){ //for future enemy healing
+    public void useItem(BattleEntity attacker, BattleEntity receiver){
         super.useItem(attacker);
         healingM.doMove(attacker, receiver);
     }

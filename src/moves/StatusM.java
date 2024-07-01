@@ -4,13 +4,13 @@ import entities.BattleEntity;
 import statuses.DoT;
 import statuses.Status;
 
-public class StatusM extends Move{ //Status is always a solo move without passive or a passive to another move
+public class StatusM extends Move{
     private final Status status;
-    public StatusM(String name, Status status){ //Pure status move
+    public StatusM(String name, Status status){
         super(name);
         this.status = status;
     }
-    public StatusM(String name, Status status, boolean receiverDirected){ //Pure SELF status move
+    public StatusM(String name, Status status, boolean receiverDirected){
         super(name);
         this.receiverDirected = receiverDirected;
         this.status = status;

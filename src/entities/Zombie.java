@@ -11,7 +11,6 @@ public class Zombie extends Enemy{
         Move move;
         addMove(new DamagingM("Arm Swing", 0.8, "MELEE", "NONE"));
         move = new DamagingM("Bite", 0.4, "MELEE", "NONE");
-//        ((DamagingM)move.addPassiveMove(new StatusM("Bite", new DoT("Bitten", 32)));
         move.addPassiveMove(new StatusM(new DoT("Bitten", StatusType.BLEED)));
         addMove(move);
         move = new DamagingM("Infect", 0.4, "MELEE", "NONE");

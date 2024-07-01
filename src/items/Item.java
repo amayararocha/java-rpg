@@ -12,11 +12,10 @@ public abstract class Item {
         this.name = name;
     }
 
-    //GETTER
     public String getName() {
         return name;
     }
-    //SETTER
+
     public void setName(String name) {
         this.name = name;
     }

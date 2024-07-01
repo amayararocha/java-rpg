@@ -14,20 +14,19 @@ public abstract class Status {
     int duration;
     StatusType type;
 
-    public Status(String name, StatusType type){ //Default duration 3 turns
+    public Status(String name, StatusType type){
         this.name = name;
         this.type = type;
         this.duration = 5;
     }
 
     public String toString(){
-        //melancholy
         String statusDesc = "Name: " + name + "\t\t";
         if(name.length() < 16) statusDesc += "\t";
         statusDesc += "Type: " + getStatusName();
         return statusDesc;
     }
-    //GETTERS
+
     public String getName() {
         return name;
     }
@@ -36,11 +35,10 @@ public abstract class Status {
         return type;
     }
 
-    //SETTERS
     public void setName(String name) {
         this.name = name;
     }
-    public void statusInflict(BattleEntity battleEntity){   //to be overridden
+    public void statusInflict(BattleEntity battleEntity){
         battleEntity.addStatus(cloneStatus());
     }
     public abstract int statusDecrement(BattleEntity battleEntity);

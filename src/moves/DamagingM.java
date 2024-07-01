@@ -4,7 +4,7 @@ import entities.BattleEntity;
 
 import java.util.ArrayList;
 
-public class DamagingM extends Move{//can be main move or damaging move passive (self damage)
+public class DamagingM extends Move{
     protected double damage;
     protected ArrayList<String> attributes = new ArrayList<>();
 
@@ -14,16 +14,16 @@ public class DamagingM extends Move{//can be main move or damaging move passive 
         this.attributes.add(attribute1);
         this.attributes.add(attribute2);
     }
-    public DamagingM(String name, double damage, boolean receiverDirected){ //when DamagingM is selfdamage
+    public DamagingM(String name, double damage, boolean receiverDirected){
         this(name, damage, "NONE", "NONE");
         this.receiverDirected = receiverDirected;
     }
-    public DamagingM(double damage, String attribute1, String attribute2){ //when DamagingM is passive, maybe a secondary effect or multihit
+    public DamagingM(double damage, String attribute1, String attribute2){
         this("Passive Damage <Not real name>", damage, attribute1, attribute2);
         isPassive = true;
 
     }
-    public DamagingM(double damage, boolean receiverDirected){ //when DamagingM is passive and selfdamage, like a recoil
+    public DamagingM(double damage, boolean receiverDirected){
         this(damage, "NONE", "NONE");
         this.receiverDirected = receiverDirected;
     }
@@ -39,7 +39,7 @@ public class DamagingM extends Move{//can be main move or damaging move passive 
     @Override
     public int doMove(BattleEntity attacker, BattleEntity receiver) {
         if(!isPassive) System.out.println("<"+attacker.getName()+"> used <"+name+">!");
-        int state; //-1 if player died, 1 if enemy died, 0 if none
+        int state;
         if(receiverDirected){
             if((state = attacker.doDamage(this, receiver)) != 0) return state;
         }

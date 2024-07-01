@@ -4,24 +4,24 @@ import entities.BattleEntity;
 
 import java.util.ArrayList;
 
-public class HealingM extends Move{ //can be main move or a damaging passive
+public class HealingM extends Move{
     protected int amount;
     protected ArrayList<Move> passiveMoves = new ArrayList<>();
 
-    public HealingM(String name, int amount) { //RECEIVERDIRECTED is false default cuz you mostly heal YOURSELF
+    public HealingM(String name, int amount) {
         super(name);
         this.amount = amount;
         receiverDirected = false;
     }
-    public HealingM(String name, int amount, boolean receiverDirected) {  //Pure Healing move to enemy
+    public HealingM(String name, int amount, boolean receiverDirected) {
         super(name);
         this.amount = amount;
         this.receiverDirected = receiverDirected;
     }
-    public HealingM(int amount) {  //Passive healing move
+    public HealingM(int amount) {
         this.amount = amount;
     }
-    public HealingM(int amount, ArrayList<Move> passiveMoves) {   // Healing move with passive Status move
+    public HealingM(int amount, ArrayList<Move> passiveMoves) {
         this.amount = amount;
         this.passiveMoves = passiveMoves;
     }

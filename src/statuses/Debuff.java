@@ -4,15 +4,9 @@ import entities.*;
 
 public class Debuff extends Status{
 
-    //DEBUFF (2) TYPES:
-    //1 Health Decrease
-    //2 Attack Decrease
-    //3 Crit Chance Decrease
-    //4 Crit Damage Decrease
-
     private final float multiplier;
 
-    public Debuff(String name, StatusType type, float multiplier) { //Default duration 3 turns
+    public Debuff(String name, StatusType type, float multiplier) {
         super(name, type);
         this.multiplier = multiplier;
     }

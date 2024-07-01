@@ -19,7 +19,7 @@ public abstract class Weapon {
         this.critDamage = critDamage;
         moves = new ArrayList<>();
     }
-    //GETTER
+
     public String getName() {
         return name;
     }

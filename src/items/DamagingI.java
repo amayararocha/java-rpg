@@ -12,7 +12,7 @@ public class DamagingI extends Item{
         super(name);
         this.damage = damage;
     }
-    public DamagingI(String name, int damage, StatusM statusM) {   // Damaging Item that has a passive Status move
+    public DamagingI(String name, int damage, StatusM statusM) {
         super(name);
         this.damage = damage;
         this.statusM = statusM;
